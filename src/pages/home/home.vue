@@ -60,7 +60,7 @@
   import {mapState,mapActions} from "vuex"
 
   export default {
-    name: "device",
+    name: "home",
     data() {
       return {
         menuList:[],
@@ -99,176 +99,176 @@
                 "parentId": 0,
                 "childList": [
                   {
-                    "id": 3210,
+                  "id": 3210,
+                  "code": null,
+                  "name": "数据概况",
+                  "href": "/home/profiledata",
+                  "icon": null,
+                  "parentId": 3209,
+                  "childList": [{
+                    "id": 3211,
                     "code": null,
                     "name": "数据概况",
                     "href": "/home/profiledata",
                     "icon": null,
-                    "parentId": 3209,
+                    "parentId": 3210,
                     "childList": [{
-                      "id": 3211,
+                      "id": 3217,
                       "code": null,
-                      "name": "数据概况",
-                      "href": "/home/profiledata",
+                      "name": "查看",
+                      "href": "/",
                       "icon": null,
-                      "parentId": 3210,
-                      "childList": [{
-                        "id": 3217,
-                        "code": null,
-                        "name": "查看",
-                        "href": "/",
-                        "icon": null,
-                        "parentId": 3211,
-                        "childList": null
-                      }]
+                      "parentId": 3211,
+                      "childList": null
                     }]
-                  },
+                  }]
+                },
                   {
-                    "id": 3212,
+                  "id": 3212,
+                  "code": null,
+                  "name": "交易管理",
+                  "href": "/",
+                  "icon": null,
+                  "parentId": 3209,
+                  "childList": [{
+                    "id": 3352,
                     "code": null,
-                    "name": "交易管理",
-                    "href": "/",
+                    "name": "微信支付宝平台交易记录",
+                    "href": "/home/trading",
                     "icon": null,
-                    "parentId": 3209,
+                    "parentId": 3212,
+                    "childList": null
+                  }, {
+                    "id": 3213,
+                    "code": null,
+                    "name": "交易记录",
+                    "href": "/home/transaction",
+                    "icon": null,
+                    "parentId": 3212,
                     "childList": [{
-                      "id": 3352,
+                      "id": 3218,
                       "code": null,
-                      "name": "微信支付宝平台交易记录",
-                      "href": "/home/trading",
+                      "name": "查看",
+                      "href": "/",
                       "icon": null,
-                      "parentId": 3212,
+                      "parentId": 3213,
+                      "childList": null
+                    }]
+                  }, {
+                    "id": 3214,
+                    "code": null,
+                    "name": "交易汇总",
+                    "href": "/home/transall",
+                    "icon": null,
+                    "parentId": 3212,
+                    "childList": [{
+                      "id": 3219,
+                      "code": null,
+                      "name": "查看",
+                      "href": "/",
+                      "icon": null,
+                      "parentId": 3214,
+                      "childList": null
+                    }]
+                  }]
+                },
+                  {
+                  "id": 3215,
+                  "code": null,
+                  "name": "运营监控管理",
+                  "href": "/",
+                  "icon": null,
+                  "parentId": 3209,
+                  "childList": [{
+                    "id": 3358,
+                    "code": null,
+                    "name": "签到列表",
+                    "href": "/home/signed",
+                    "icon": null,
+                    "parentId": 3215,
+                    "childList": [{
+                      "id": 3359,
+                      "code": null,
+                      "name": "查看",
+                      "href": "/",
+                      "icon": null,
+                      "parentId": 3358,
                       "childList": null
                     }, {
-                      "id": 3213,
+                      "id": 3360,
                       "code": null,
-                      "name": "交易记录",
-                      "href": "/home/transaction",
+                      "name": "查看签到历史",
+                      "href": "/",
                       "icon": null,
-                      "parentId": 3212,
-                      "childList": [{
-                        "id": 3218,
-                        "code": null,
-                        "name": "查看",
-                        "href": "/",
-                        "icon": null,
-                        "parentId": 3213,
-                        "childList": null
-                      }]
-                    }, {
-                      "id": 3214,
-                      "code": null,
-                      "name": "交易汇总",
-                      "href": "/home/transall",
-                      "icon": null,
-                      "parentId": 3212,
-                      "childList": [{
-                        "id": 3219,
-                        "code": null,
-                        "name": "查看",
-                        "href": "/",
-                        "icon": null,
-                        "parentId": 3214,
-                        "childList": null
-                      }]
+                      "parentId": 3358,
+                      "childList": null
                     }]
-                  },
-                  {
-                    "id": 3215,
+                  }, {
+                    "id": 3216,
                     "code": null,
-                    "name": "运营监控管理",
-                    "href": "/",
+                    "name": "报警监控",
+                    "href": "/home/monitor",
                     "icon": null,
-                    "parentId": 3209,
+                    "parentId": 3215,
                     "childList": [{
-                      "id": 3358,
+                      "id": 3220,
                       "code": null,
-                      "name": "签到列表",
-                      "href": "/home/signed",
+                      "name": "查看",
+                      "href": "/",
                       "icon": null,
-                      "parentId": 3215,
-                      "childList": [{
-                        "id": 3359,
-                        "code": null,
-                        "name": "查看",
-                        "href": "/",
-                        "icon": null,
-                        "parentId": 3358,
-                        "childList": null
-                      }, {
-                        "id": 3360,
-                        "code": null,
-                        "name": "查看签到历史",
-                        "href": "/",
-                        "icon": null,
-                        "parentId": 3358,
-                        "childList": null
-                      }]
-                    }, {
-                      "id": 3216,
-                      "code": null,
-                      "name": "报警监控",
-                      "href": "/home/monitor",
-                      "icon": null,
-                      "parentId": 3215,
-                      "childList": [{
-                        "id": 3220,
-                        "code": null,
-                        "name": "查看",
-                        "href": "/",
-                        "icon": null,
-                        "parentId": 3216,
-                        "childList": null
-                      }]
-                    }, {
-                      "id": 3361,
-                      "code": null,
-                      "name": "补货管理",
-                      "href": "/home/replenishment",
-                      "icon": null,
-                      "parentId": 3215,
-                      "childList": [{
-                        "id": 3362,
-                        "code": null,
-                        "name": "查看",
-                        "href": "/",
-                        "icon": null,
-                        "parentId": 3361,
-                        "childList": null
-                      }]
-                    }, {
-                      "id": 3345,
-                      "code": null,
-                      "name": "货道变更",
-                      "href": "/home/aislechange",
-                      "icon": null,
-                      "parentId": 3215,
-                      "childList": [{
-                        "id": 3346,
-                        "code": null,
-                        "name": "查看",
-                        "href": "/",
-                        "icon": null,
-                        "parentId": 3345,
-                        "childList": null
-                      }, {
-                        "id": 3347,
-                        "code": null,
-                        "name": "导出报表",
-                        "href": "/",
-                        "icon": null,
-                        "parentId": 3345,
-                        "childList": null
-                      }, {
-                        "id": 3348,
-                        "code": null,
-                        "name": "同步",
-                        "href": "/",
-                        "icon": null,
-                        "parentId": 3345,
-                        "childList": null
-                      }]
+                      "parentId": 3216,
+                      "childList": null
                     }]
-                  }
+                  }, {
+                    "id": 3361,
+                    "code": null,
+                    "name": "补货管理",
+                    "href": "/home/replenishment",
+                    "icon": null,
+                    "parentId": 3215,
+                    "childList": [{
+                      "id": 3362,
+                      "code": null,
+                      "name": "查看",
+                      "href": "/",
+                      "icon": null,
+                      "parentId": 3361,
+                      "childList": null
+                    }]
+                  }, {
+                    "id": 3345,
+                    "code": null,
+                    "name": "货道变更",
+                    "href": "/home/aislechange",
+                    "icon": null,
+                    "parentId": 3215,
+                    "childList": [{
+                      "id": 3346,
+                      "code": null,
+                      "name": "查看",
+                      "href": "/",
+                      "icon": null,
+                      "parentId": 3345,
+                      "childList": null
+                    }, {
+                      "id": 3347,
+                      "code": null,
+                      "name": "导出报表",
+                      "href": "/",
+                      "icon": null,
+                      "parentId": 3345,
+                      "childList": null
+                    }, {
+                      "id": 3348,
+                      "code": null,
+                      "name": "同步",
+                      "href": "/",
+                      "icon": null,
+                      "parentId": 3345,
+                      "childList": null
+                    }]
+                  }]
+                }
                 ]
               },
               {

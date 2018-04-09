@@ -2,10 +2,16 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 import Login from "../pages/login/login.vue"
-import Index from "../pages/index/index.vue"
+
+//home
+import Home from "../pages/home/home.vue"
+import Profiledata from "../pages/home/profiledata.vue"
+import Transaction from "../pages/home/transaction.vue"
+
+//device
 import Device from "../pages/device/device.vue"
-import Devicedetail from "../pages/device/devicedetail.vue"
-import footer from "../components/footer.vue"
+import Devicema from "../pages/device/devicema.vue"
+
 
 
 Vue.use(Router);
@@ -19,39 +25,60 @@ const login = [
 ]
 
 const index=[
-  /*动态路由配置
   {
-    name:"index",
-    path:"/index/:id",
-    component:Index
-  },*/
-  {
-    name:"index",
-    path:"/index",
-    components:{
-      node:Index,
-      footer:footer
+    name:"profiledata",
+    path:"profiledata",
+    component:Profiledata,
+    //路由独享
+    beforeEnter:(to, from, next)=>{
+      //console.info(to);
+      //console.info(from);
+      next()
+    },
+    meta:{
+      requiresAuth:true
     }
+  },
+  {
+    name:"transaction",
+    path:"transaction",
+    component:Transaction
   }
 ]
+
+
+
+const home=[
+  {
+    name:"home",
+    path:"/home",
+    component:Home,
+    children:[
+      ...index,
+    ]
+  }
+]
+
+const devicelist=[
+  {
+    name:'deivecma',
+    path:"devicema",
+    component:Devicema
+  }
+]
+
 
 const device=[
   {
     name:"device",
     path:"/device",
-    components:{
-      node:Device,
-      footer:footer
-    },
+    component:Device,
     children:[
-      {
-        name:"devicedetail",
-        path:"devicedetail",
-        component:Devicedetail
-      }
+      ...devicelist
     ]
   }
 ]
+
 
 
 
@@ -67,16 +94,36 @@ const routes = [
     redirect:"/login"
   },
   ...login,
-  ...index,
+  ...home,
   ...device
 ]
 
-
 const router = new Router({
+  linkActiveClass: 'active',
   routes:routes,
-  mode:'hash'
+  mode:'history'
 })
 
+//全局解析守卫  -  和beforeEach很相似
+/*router.beforeResolve((to,from,next)=>{
+  console.info(to)
+  console.info(from)
+  next()
+})*/
+
+
+//全局守卫
+/*router.beforeEach((to,from,next)=>{
+  console.info(to)  //将要进入的目标 路由对象
+  console.info(from)  //当前导航正要离开的路由
+  next()
+})*/
+
+//全局后置钩子  不需要next函数
+/*router.afterEach((to,from)=>{
+  console.info(to);
+  console.info(from);
+})*/
 
 
 export default router

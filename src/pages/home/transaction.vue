@@ -1,13 +1,13 @@
 <template>
 
-    <div>header</div>
+    <div>transaction</div>
 
 </template>
 
 <script>
 
     export default {
-        name: "c-header",
+        name: "transaction",
         data() {
             return {}
         },

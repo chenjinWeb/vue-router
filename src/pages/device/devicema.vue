@@ -1,15 +1,13 @@
 <template>
 
-  <div>
-    <div>devicedetail</div>
-  </div>
+    <div>devicema</div>
 
 </template>
 
 <script>
 
     export default {
-        name: "app",
+        name: "devicema",
         data() {
             return {}
         },

@@ -1,13 +1,17 @@
 <template>
 
-    <div style=" position: fixed; bottom: 0; background: red; color: #fff; width: 100%; text-align: center; font-size: 30px;">footer</div>
+  <div>
+    aaaa
+
+    <router-link to="/home/transaction">asd</router-link>
+  </div>
 
 </template>
 
 <script>
 
     export default {
-        name: "c-footer",
+        name: "profiledata",
         data() {
             return {}
         },

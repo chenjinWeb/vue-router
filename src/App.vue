@@ -1,17 +1,32 @@
 <template>
+
   <div>
-    <router-view name="node"></router-view>
-    <router-view name="footer"></router-view>
-    <router-view></router-view>
+
+    <keep-alive>
+
+      <router-view></router-view>
+
+    </keep-alive>
+
   </div>
+
 </template>
 
 <script>
+  import {mapState,mapActions} from "vuex"
 export default {
-  name: 'App'
+  name: 'App',
+  data(){
+    return {
+
+    }
+  },
+
 }
 </script>
 
 <style>
+
+  @import "./assets/css/common.css";
 
 </style>
